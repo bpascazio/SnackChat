@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
 
@@ -27,7 +28,20 @@ class ViewController: UIViewController {
     @IBAction func takeAPic(sender: AnyObject) {
         
         let image = UIImage(named: "Photo")
+        let png = UIImageJPEGRepresentation(image!, 0.1)
         imagePreview.image = image
+        
+        // Send pic up to parse.
+        let pics = PFObject(className: "Pics")
+        pics.setObject("Bob", forKey: "Name")
+        pics.setObject(png!, forKey: "ImageData")
+        pics.saveInBackgroundWithBlock { (succeeded, error) -> Void in
+            if succeeded {
+                print("Object Uploaded")
+            } else {
+                print("Error: \(error)")
+            }
+        }
     }
 
 }

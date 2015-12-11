@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A7138FC821BC4A581E2EF3A /* Pods_SnackChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40FA92B9104F77C41B1CA6E6 /* Pods_SnackChat.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C13C64991C1A50D200613DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C64981C1A50D200613DB1 /* AppDelegate.swift */; };
 		C13C649B1C1A50D200613DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C649A1C1A50D200613DB1 /* ViewController.swift */; };
 		C13C649E1C1A50D200613DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13C649C1C1A50D200613DB1 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		235659985A585048677A18F9 /* Pods-SnackChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnackChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnackChat/Pods-SnackChat.release.xcconfig"; sourceTree = "<group>"; };
+		40FA92B9104F77C41B1CA6E6 /* Pods_SnackChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnackChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6151BF797A89472433BFC644 /* Pods-SnackChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnackChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnackChat/Pods-SnackChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C13C64951C1A50D200613DB1 /* SnackChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13C64981C1A50D200613DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C13C649A1C1A50D200613DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,7 @@
 		C13C649F1C1A50D200613DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C13C64A21C1A50D200613DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C13C64A41C1A50D200613DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13C64AA1C1A574100613DB1 /* SnackChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnackChat-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7138FC821BC4A581E2EF3A /* Pods_SnackChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C61A195E2BA03919BA6FD43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40FA92B9104F77C41B1CA6E6 /* Pods_SnackChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C6BC41CE7CCE58712CED7F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6151BF797A89472433BFC644 /* Pods-SnackChat.debug.xcconfig */,
+				235659985A585048677A18F9 /* Pods-SnackChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C13C648C1C1A50D200613DB1 = {
 			isa = PBXGroup;
 			children = (
 				C13C64971C1A50D200613DB1 /* SnackChat */,
 				C13C64961C1A50D200613DB1 /* Products */,
+				4C6BC41CE7CCE58712CED7F9 /* Pods */,
+				1C61A195E2BA03919BA6FD43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +85,7 @@
 				C13C649F1C1A50D200613DB1 /* Assets.xcassets */,
 				C13C64A11C1A50D200613DB1 /* LaunchScreen.storyboard */,
 				C13C64A41C1A50D200613DB1 /* Info.plist */,
+				C13C64AA1C1A574100613DB1 /* SnackChat-Bridging-Header.h */,
 			);
 			path = SnackChat;
 			sourceTree = "<group>";
@@ -71,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C13C64A71C1A50D200613DB1 /* Build configuration list for PBXNativeTarget "SnackChat" */;
 			buildPhases = (
+				F726B988929AA204E7C88B70 /* Check Pods Manifest.lock */,
 				C13C64911C1A50D200613DB1 /* Sources */,
 				C13C64921C1A50D200613DB1 /* Frameworks */,
 				C13C64931C1A50D200613DB1 /* Resources */,
+				DC81CCA03D31005AB6CF17F0 /* Copy Pods Resources */,
+				3215ADFE85219F7F7049071B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3215ADFE85219F7F7049071B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnackChat/Pods-SnackChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC81CCA03D31005AB6CF17F0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnackChat/Pods-SnackChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F726B988929AA204E7C88B70 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C13C64911C1A50D200613DB1 /* Sources */ = {
@@ -245,23 +322,30 @@
 		};
 		C13C64A81C1A50D200613DB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6151BF797A89472433BFC644 /* Pods-SnackChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SnackChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.pace.SnackChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnackChat/SnackChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C13C64A91C1A50D200613DB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 235659985A585048677A18F9 /* Pods-SnackChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SnackChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.pace.SnackChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnackChat/SnackChat-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -284,6 +368,7 @@
 				C13C64A91C1A50D200613DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
